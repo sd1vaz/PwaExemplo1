@@ -1,0 +1,47 @@
+﻿@page "/counter"
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Contador</h1>
+
+<p role="status"> Valor atual do contador: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="ResetCount">
+    Resetar
+</button>
+
+<button class="btn btn-primary" @onclick="IncrementCount">
+    Clique aqui para Addicionar +1
+</button>
+
+<button class="btn btn-primary" @onclick="IncrementarContador5">
+    Clique aqui para Addicionar +5
+</button>
+
+<button class="btn btn-primary" @onclick="MultiplicarContador10">
+    Clique aqui para Multiplicar *10
+</button>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+
+    public void IncrementarContador5()
+    {
+        currentCount += 5;
+    }
+
+      public void MultiplicarContador10()
+    {
+        currentCount *= 10;
+    }
+
+       public void ResetCount()
+    {
+        currentCount = 0;
+    }
+}
